@@ -1,25 +1,14 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import Card from './components/card.js';
+  
+function App() {  
+  const left = { textAlign: "left" }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id = "main">
+      <Card heading="Mobile Operating System" l1="Android" l2="Blackberry" l3="iPhone" l4="Windows Phone" css = {left} />
+      <Card heading="Mobile Manufacturers" l1="Samsung" l2="HTC" l3="Micromax" l4="Apple" />
     </div>
   );
 }
-
 export default App;
