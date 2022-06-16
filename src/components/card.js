@@ -1,13 +1,16 @@
-function Card({ heading, l1, l2, l3, l4, css }) {
-    return <div style = {css}>
-        <h1>{heading}</h1>
-        <ul>
-            <li>{l1}</li>
-            <li>{l2}</li>
-            <li>{l3}</li>
-            <li>{l4}</li>
-        </ul>
-    </div>
-}
+export const Card = ({items})=>{
 
-export default Card;
+    return (
+        items.map((e)=>
+        (
+            <div>
+                <h1>{e.heading}</h1>
+                <ul>
+                    {e.info.map((item)=>(
+                        <li>{item}</li>
+                    ))}
+                </ul>
+            </div>
+        ))
+    )
+}
